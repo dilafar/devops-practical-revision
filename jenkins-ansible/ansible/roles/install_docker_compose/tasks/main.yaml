@@ -1,0 +1,5 @@
+- name: install docker compose
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/v2.29.1/docker-compose-{{ lookup('pipe', 'uname -s') }}-{{ lookup('pipe', 'uname -m') }}"
+    dest: /usr/local/bin/docker-compose
+    mode: +x
